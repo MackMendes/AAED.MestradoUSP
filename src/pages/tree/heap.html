@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>Algoritmos de AAED - Mestrado USP (HEAP)</title>
     <!-- Styles -->
-    <link href="styles/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
@@ -49,20 +49,36 @@
 			<button type="button" class="btn btn-success" onclick="testBuildMaxHeap()">Construir Max Heap!</button>
 			<p id="resultBuildMaxHeap"></p>
 		</div>
+		<h2>Heapsort</h2>
+		<div>
+			<p>
+			O algoritmo Heapsort rearranja um vetor A[1..n] em três etapas:
+			<ol id="etapas">
+				<li> Construção de um maxheap
+				<li> Inserção do maior elemento na última posição
+				<li> MaxHeapify no vetor A[1..m-1] para garantir, na próxima iteração, que o elemento a ser inserido na última posição do vetor A[1..m] é o maior elemento do heap
+			</ol>
+			Vamos ordenar o vetor A = [14, 13, 34, 17, 15, 10, 46, 23, 12, 41, 30, 21].
+			</p>
+			<button type="button" class="btn btn-success" onclick="testHeapSort()">Heapsort It!</button>
+			<p id="resultHeapSort"></p>
         <hr />
         <footer>
             <p>&copy; 2016 - AAED USP</p>
         </footer>
     </div>
     <!-- Scripts -->
-    <script src="library/jquery/jquery-1.11.2.min.js"></script>
-    <script src="library/bootstrap/bootstrap.js"></script>
-    <script src="library/bootstrap/respond.min.js"></script>
-    <script src="library/pages/navigate.js"></script>
-	<script src="library/util/swap.js"></script>
+    <script src="../../library/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../../library/bootstrap/bootstrap.js"></script>
+    <script src="../../library/bootstrap/respond.min.js"></script>
+    <script src="../../library/pages/navigate.js"></script>
+	<script src="../../library/util/swap.js"></script>
 	
 	<!-- Max Heap -->
-	<script src="library/util/maxHeapify.js"></script>
-	<script src="library/util/buildMaxHeap.js"></script>
+	<script src="../../library/util/maxHeapify.js"></script>
+	<script src="../../library/util/buildMaxHeap.js"></script>
+	
+	<!-- Heapsort -->
+	<script src="../../library/util/heapSort.js"></script>
 </body>
 </html>
