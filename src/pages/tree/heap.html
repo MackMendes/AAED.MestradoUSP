@@ -16,8 +16,25 @@
                 Incluir aqui comentário e detalhes de Heap
             </h3>
         </div>
-        <!-- Desenvolver aqui -->
-        <!-- Terminar aqui  -->
+		<h2>Max Heapify</h2>
+		<div>
+			<p> 
+			O algoritmo max heapify recebe um vetor, o tamanho deste vetor 
+			e o nó i que deve ser realocado para a posição correta de modo
+			a satisfazer a relação abaixo:
+			
+			A[chao(i/2)] >= A[i]
+			
+			Ou seja, em um max-heap, o pai é sempre maior que seus filhos.
+			</p>
+			<p> 
+			Considere, por exemplo, o quase max-heap A = [13, 46, 17, 34, 41, 15, 14, 23, 30, 21, 10, 12].
+			Sua raiz (13) está no local errado, pois 13 < 46 e 13 < 17.
+			Clique no botão abaixo para ver o resultado do algoritmo Max Heapify.
+			</p>
+			<button type="button" class="btn btn-success" onclick="testMaxHeapify()">MaxHeapify!</button>
+			<p id="resultMaxHeap"></p>
+		</div>
         <hr />
         <footer>
             <p>&copy; 2016 - AAED USP</p>
@@ -28,5 +45,9 @@
     <script src="/library/bootstrap/bootstrap.js"></script>
     <script src="/library/bootstrap/respond.min.js"></script>
     <script src="/library/pages/navigate.js"></script>
+	
+	<!-- MaxHeapify -->
+	<script src="/util/swap.js"></script>
+	<script src="/util/maxHeapify.js"></script>
 </body>
 </html>
