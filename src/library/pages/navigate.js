@@ -7,12 +7,6 @@
                 { name: 'ABB', url: '/pages/tree/ABB.html', children: [] }
             ]
         },
-        {
-            name: 'Estruturas', url: '#', children: [
-                { name: 'Fila', url: '/pages/structure/stack.html', children: [] },
-                { name: 'Pilha', url: '/pages/structure/queue.html', children: [] }
-            ]
-        },
 		{
 			name: 'Ordenação', url: '#', children: [
 				{ name: 'Quicksort', url: '/pages/sorting/quick.html', children: [] },
@@ -20,6 +14,12 @@
 				{ name: 'Bucketsort', url: '/pages/sorting/bucket.html', children: [] }
 			]
 		},
+        {
+            name: 'Estruturas', url: '#', children: [
+                { name: 'Fila', url: '/pages/structure/stack.html', children: [] },
+                { name: 'Pilha', url: '/pages/structure/queue.html', children: [] }
+            ]
+        },
         { name: 'Grafo', url: 'grafo.html', children: [] }
     ];
 
