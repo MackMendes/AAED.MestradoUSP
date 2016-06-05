@@ -14,6 +14,13 @@
                 { name: 'Pilha', url: '/pages/structure/queue.html', children: [] }
             ]
         },
+		{
+			name: 'Ordenação', url: '#', children: [
+				{ name: 'Quicksort', url: '/pages/sorting/quick.html', children: [] },
+				{ name: 'Radixsort', url: '/pages/sorting/radix.html', children: [] },
+				{ name: 'Bucketsort', url: '/pages/sorting/bucket.html', children: [] }
+			]
+		},
         { name: 'Grafo', url: 'grafo.html', children: [] }
     ];
 
