@@ -4,7 +4,6 @@
         {
             name: 'Árvores', url: '#', children: [
                 { name: 'Heap', url: '/pages/tree/heap.html', children: [] },
-                { name: 'Quicksort', url: '/pages/tree/quicksort.html', children: [] },
                 { name: 'ABB', url: '/pages/tree/ABB.html', children: [] }
             ]
         },
