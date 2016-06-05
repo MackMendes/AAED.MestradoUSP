@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>Algoritmos de AAED - Mestrado USP (HEAP)</title>
     <!-- Styles -->
-    <link href="/styles/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="/styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="styles/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
@@ -35,19 +35,34 @@
 			<button type="button" class="btn btn-success" onclick="testMaxHeapify()">MaxHeapify!</button>
 			<p id="resultMaxHeap"></p>
 		</div>
+		<h2>Build Max Heap</h2>
+		<div>
+			<p>
+			O algoritmo Build Max Heap recebe um heap e, utilizando o Max Heapify, retorna um max heap.
+			O algoritmo inicia a partir do pai do último nó (chao[n/2]) e termina na raiz da árvore,
+			organizando todas as subárvores.
+			O resultado final é um max heap.
+			</p>
+			<p>
+			Vamos construir um max heap a partir de A = [14, 13, 34, 17, 15, 10, 46, 23, 12, 41, 30, 21].
+			</p>
+			<button type="button" class="btn btn-success" onclick="testBuildMaxHeap()">Construir Max Heap!</button>
+			<p id="resultBuildMaxHeap"></p>
+		</div>
         <hr />
         <footer>
             <p>&copy; 2016 - AAED USP</p>
         </footer>
     </div>
     <!-- Scripts -->
-    <script src="/library/jquery/jquery-1.11.2.min.js"></script>
-    <script src="/library/bootstrap/bootstrap.js"></script>
-    <script src="/library/bootstrap/respond.min.js"></script>
-    <script src="/library/pages/navigate.js"></script>
-	
-	<!-- MaxHeapify -->
+    <script src="library/jquery/jquery-1.11.2.min.js"></script>
+    <script src="library/bootstrap/bootstrap.js"></script>
+    <script src="library/bootstrap/respond.min.js"></script>
+    <script src="library/pages/navigate.js"></script>
 	<script src="library/util/swap.js"></script>
+	
+	<!-- Max Heap -->
 	<script src="library/util/maxHeapify.js"></script>
+	<script src="library/util/buildMaxHeap.js"></script>
 </body>
 </html>

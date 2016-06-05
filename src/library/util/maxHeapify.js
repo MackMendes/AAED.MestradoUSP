@@ -25,11 +25,11 @@ function testMaxHeapify(){
 	  Devido à determinação dos filhos de i com base em i, precisamos de arrays
 	  iniciando em 1.*/
 	var A = [null, 13, 46, 17, 34, 41, 15, 14, 23, 30, 21, 10, 12];
-	var m = A.length-1;
+	var m = A.length - 1;
 	
 	A = maxHeapify(A, m, 1);
 	
-	// Remover o elemento null
+	// Remover o elemento nulo
 	A = A.slice(1);
 	
 	$("#resultMaxHeap").text(A.toString());
