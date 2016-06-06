@@ -1,4 +1,4 @@
-﻿// Dependence: PropertiesTree
+// Dependence: PropertiesTree
 var AlgorABB = (function ($, propertiesTree) {
     var esq = propertiesTree.Esq;
     var dir = propertiesTree.Dir;
@@ -82,7 +82,11 @@ var AlgorABB = (function ($, propertiesTree) {
         else
             dir(ant, newNode); // dir(ant) <= newNode
 
-        pai(newNode, ant);
+        pai(newNode, ant); // Seta para o novo nó o pai dele.
+
+        NodeBaseDynamic = T; // Atualizando a lista Global de Nó!
+        // Retornando o novo nó para imprimir
+        return newNode;
     };
 
     return {
