@@ -11,8 +11,9 @@ Ou consulte a [Ajuda do Github](https://help.github.com/).
 
 --
 ### Novo em JavaScript? 
-Referência: [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference)
+Referência do Básico ao Avançado: [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference)
 
-Artigo: [Depurando JavaScript no Chrome](http://netcoders.com.br/blog/depurando-javascript-chrome/)
+Artigos: [Depurando JavaScript no Chrome](http://netcoders.com.br/blog/depurando-javascript-chrome/)
 
-Padrão Modular: [Livro Ajuda](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+Padrões de Projeto: [Padrão Modular](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+[Do Factory](http://www.dofactory.com/javascript/design-patterns)
