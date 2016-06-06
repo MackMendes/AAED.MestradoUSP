@@ -1,19 +1,19 @@
-﻿(function (document, $) {
+(function (document, $) {
     // Lista de Menu 
     var menusExists = [
         {
             name: 'Árvores', url: '#', children: [
                 { name: 'Heap', url: '/pages/tree/heap.html', children: [] },
-                { name: 'ABB', url: '/pages/tree/ABB.html', children: [] },
-                { name: 'Árvore Binária', url: '/pages/tree/binary.html', children: [] }
+                { name: 'Árvore Binária', url: '/pages/tree/binary.html', children: [] },
+                { name: 'ABB', url: '/pages/tree/ABB.html', children: [] }
             ]
         },
 		{
-			name: 'Ordenação', url: '#', children: [
+		    name: 'Ordenação', url: '#', children: [
 				{ name: 'Quicksort', url: '/pages/sorting/quick.html', children: [] },
 				{ name: 'Radixsort', url: '/pages/sorting/radix.html', children: [] },
 				{ name: 'Bucketsort', url: '/pages/sorting/bucket.html', children: [] }
-			]
+		    ]
 		},
         {
             name: 'Estruturas', url: '#', children: [
