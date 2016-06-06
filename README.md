@@ -16,4 +16,5 @@ Referência do Básico ao Avançado: [Mozilla](https://developer.mozilla.org/pt-
 Artigos: [Depurando JavaScript no Chrome](http://netcoders.com.br/blog/depurando-javascript-chrome/)
 
 Padrões de Projeto: [Padrão Modular](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-[Do Factory](http://www.dofactory.com/javascript/design-patterns)
+
+[Repositório de Padrões GOF com JS](http://www.dofactory.com/javascript/design-patterns)
