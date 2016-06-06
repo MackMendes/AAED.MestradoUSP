@@ -20,7 +20,7 @@
                 { name: 'Pilha', url: '/pages/structure/queue.html', children: [] }
             ]
         },
-        { name: 'Grafo', url: 'grafo.html', children: [] }
+        { name: 'Grafo', url: '/pages/grafo.html', children: [] }
     ];
 
     // Comportamento para criar link do menu

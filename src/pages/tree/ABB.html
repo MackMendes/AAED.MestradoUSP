@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>Algoritmos de AAED - Mestrado USP (ABB)</title>
     <!-- Styles -->
-    <link href="/styles/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="/styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
@@ -13,20 +13,49 @@
         <h2>Busca de Árvore Binária</h2>
         <div>
             <h3>
-                Incluir aqui comentário e detalhes do ABB
+                Algortimos de Busca em Árvore Binária
             </h3>
         </div>
-        <!-- Desenvolver aqui -->
-        <!-- Terminar aqui  -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Contador de Nós
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-success" onclick="onConteNosClick();">Conte Nós!</button>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Imprimi Nós
+            </div>
+            <div class="panel-body">
+                <label>Informe o Nível:</label>
+                <input id="nivelNo" type="number" name="Nível" />
+                <button type="button" class="btn btn-success" onclick="onImprimeNivelClick();">Conte Nós!</button>
+            </div>
+        </div>
+
+
+        <br />
+        <label><strong>Resultado:</strong></label>
+        <div id="result"></div>
+
         <hr />
         <footer>
             <p>&copy; 2016 - AAED USP</p>
         </footer>
     </div>
     <!-- Scripts -->
-    <script src="/library/jquery/jquery-1.11.2.min.js"></script>
-    <script src="/library/bootstrap/bootstrap.js"></script>
-    <script src="/library/bootstrap/respond.min.js"></script>
-    <script src="/library/pages/navigate.js"></script>
+    <script src="../../library/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../../library/bootstrap/bootstrap.js"></script>
+    <script src="../../library/bootstrap/respond.min.js"></script>
+    <script src="../../library/pages/navigate.js"></script>
+    <!-- Implementation -->
+    <script src="../../scripts/tree/ABB/dataABB.js"></script>
+    <script src="../../scripts/tree/ABB/algoritmosABB.js"></script>
+    <script src="../../scripts/tree/ABB/pageHelper.js"></script>
+    <script src="../../util/pageUI.js"></script>
+
 </body>
 </html>
