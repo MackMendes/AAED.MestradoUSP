@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -16,20 +16,40 @@
             <h3>
                 Algortimos de Busca em Árvore Binária
             </h3>
+            <!--  -->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Resultados:
+                </div>
+                <div id="result" class="panel-body">
+                </div>
+            </div>
+
         </div>
 
-        <!-- Imprimi Nós -->
+        <!-- Inserir Nó -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                Imprimi Nós
+                Inserir Nó
             </div>
             <div class="panel-body">
-                <label>Informe o Nível:</label>
+                <p>Aqui, você pode inserir o nó na árvore, dinâmicamente e ir verificando como vai ficando a árvore, pedindo para imprimir.</p>
+                <label>Informe o Valor do Nó:</label>
+                <input id="nodeAdd" type="number" name="Nível" value="0" />
+                <button type="button" class="btn btn-success" onclick="onInserirClick();">Inserir!</button>
+            </div>
+        </div>
+
+        <!-- Busque Nós -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Busque Nó
+            </div>
+            <div class="panel-body">
+                <label>Informe o Valor do Nó:</label>
                 <input id="nodeFind" type="number" name="Nível" value="0" />
                 <button type="button" class="btn btn-success" onclick="onBusqueClick();">Busque!</button>
-                <br />
-                <strong>Resultado:</strong>
-                <div id="result"></div>
             </div>
         </div>
 
@@ -44,7 +64,7 @@
     <script src="../../library/bootstrap/respond.min.js"></script>
     <script src="../../library/pages/navigate.js"></script>
     <!-- Implementation -->
-    <script src="../../scripts/tree/binary/dataTree.js"></script>
+    <script src="../../scripts/tree/ABB/dataDynamic.js"></script>
     <script src="../../scripts/tree/binary/propertiesTree.js"></script>
     <script src="../../scripts/tree/binary/algoritmosBinary.js"></script>
 
