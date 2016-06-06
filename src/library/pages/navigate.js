@@ -4,7 +4,8 @@
         {
             name: 'Árvores', url: '#', children: [
                 { name: 'Heap', url: '/pages/tree/heap.html', children: [] },
-                { name: 'ABB', url: '/pages/tree/ABB.html', children: [] }
+                { name: 'ABB', url: '/pages/tree/ABB.html', children: [] },
+                { name: 'Árvore Binária', url: '/pages/tree/binary.html', children: [] }
             ]
         },
 		{

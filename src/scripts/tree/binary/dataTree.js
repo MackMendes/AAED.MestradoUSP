@@ -1,4 +1,4 @@
-﻿var DataABB = (function () {
+﻿var DataTree = (function () {
     var no1 = { info: 1, pai: null, esq: no2, dir: no3 };     // Nível 0
     var no2 = { info: 22, pai: no1, esq: no4, dir: no5 };     // Nível 1
     var no3 = { info: 13, pai: no1, esq: no6, dir: no7 };     // Nível 1

@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Algoritmos de AAED - Mestrado USP (Árvore Binária)</title>
+    <!-- Styles -->
+    <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/pages/abb.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
+    <div class="container body-content">
+        <h2>Árvore Binária</h2>
+        <div>
+            <h3>
+                Algortimos de rotidas de uma Árvore Binária.
+            </h3>
+            <p>
+                <h4><strong>Árvore Montada (não ordenada)</strong></h4>
+            <p>
+                <strong>Nível 0:</strong>
+                <span>no1</span> = { info: 1, pai: <b>null</b>, esq: <i>no2</i>, dir: <i>no3</i> };
+            </p>
+            <p>
+                <strong>Nível 1</strong>
+                <span>no2</span> = { info: 22, pai: <b>no1</b>, esq: <i>no4</i>, dir: <i>no5</i> };
+                <span>no3</span> = { info: 13, pai: <b>no1</b>, esq: <i>no6</i>, dir: <i>no7</i> };
+            </p>
+            <p>
+                <strong>Nível 2</strong>
+                <span>no4</span> = { info: 18, pai: <b>no2</b>, esq: <i>no8</i>,  dir: <i>no9</i> };
+                <span>no5</span> = { info: 9,  pai: <b>no2</b>, esq: <i>no10</i>, dir: <i>no11</i> };
+                <span>no6</span> = { info: 7,  pai: <b>no3</b>, esq: <i>no12</i>, dir: <i>no13</i> };
+                <span>no7</span> = { info: 52, pai: <b>no3</b>, esq: <i>null</i>, dir: <i>null</i> };
+            </p>
+            <p>
+                <strong>Nível 3</strong>
+                <span>no8</span> = { info: 14, pai: <b>no4</b>, esq: <i>no14</i>, dir: <i>no15</i> };
+                <span>no9</span> = { info: 6, pai: <b>no4</b>, esq: <i>null</i>, dir: <i>null</i> };
+                <span>no10</span> = { info: 8, pai: <b>no5</b>, esq: <i>null</i>, dir: <i>null</i> };
+                <span>no11</span> = { info: 21, pai: <b>no5</b>, esq: <i>null</i>, dir: <i>null</i> };
+                <span>no12</span> = { info: 29, pai: <b>no6</b>, esq: <i>null</i>, dir: <i>null</i> };
+                <span>no13</span> = { info: 32, pai: <b>no6</b>, esq: <i>null</i>, dir: <i>null</i> };
+            </p>
+            <p>
+                <strong>Nível 4</strong>
+                <span>no14</span> = { info: 39, <b>pai</b>: no8, esq: <i>null</i>, dir: <i>null</i> };
+                <span>no15</span> = { info: 2, <b>pai</b>: no8, esq: <i>no16</i>, dir: <i>null</i> };
+            </p>
+            <p>
+                <strong>Nível 5</strong>
+                <span>no16</span> = { info: 63, <b>pai</b>: no15, esq: <i>null</i>, dir: <i>null</i> };
+            </p>
+        </div>
+        <!-- Contador de Nós -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Contador de Nós
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-success" onclick="onConteNosClick();">Conte Nós!</button>
+                <br />
+                <strong>Resultado:</strong>
+                <div id="resultCountNode"></div>
+            </div>
+        </div>
+        <!-- Imprimi Nós -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Imprimi Nós
+            </div>
+            <div class="panel-body">
+                <label>Informe o Nível:</label>
+                <input id="nivelNo" type="number" name="Nível" value="0" />
+                <button type="button" class="btn btn-success" onclick="onImprimeNivelClick();">Conte Nós!</button>
+                <br />
+                <strong>Resultado:</strong>
+                <div id="resultPrintNode"></div>
+            </div>
+        </div>
+        <!-- Contador de Folhas -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Contador de Folhas
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-success" onclick="onImprimeFolhasClick();">Conte Folhas!</button>
+                <br />
+                <strong>Resultado:</strong>
+                <div id="resultCountLeaf"></div>
+            </div>
+        </div>
+
+        <!-- Mostra altura da árvore -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Altura da árvore
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-success" onclick="onAlturaClick();">Altura da árvore!</button>
+                <br />
+                <strong>Resultado:</strong>
+                <div id="resultHeight"></div>
+            </div>
+        </div>
+
+        <hr />
+        <footer>
+            <p>&copy; 2016 - AAED USP</p>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="../../library/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../../library/bootstrap/bootstrap.js"></script>
+    <script src="../../library/bootstrap/respond.min.js"></script>
+    <script src="../../library/pages/navigate.js"></script>
+    <!-- Implementation -->
+    <script src="../../scripts/tree/binary/dataTree.js"></script>
+    <script src="../../scripts/tree/binary/propertiesTree.js"></script>
+    <script src="../../scripts/tree/binary/algoritmosBinary.js"></script>
+    <script src="../../scripts/tree/binary/pageHelper.js"></script>
+    <script src="../../library/util/pageUI.js"></script>
+
+</body>
+</html>

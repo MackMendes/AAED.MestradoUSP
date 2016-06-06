@@ -1,0 +1,14 @@
+﻿.body-content span {
+    color: darkblue;
+    font-weight: bolder;
+}
+
+.body-content b {
+    color: green;
+    font-weight: bolder;
+}
+
+.body-content i {
+    color: gold;
+    font-weight: bolder;
+}

@@ -6,6 +6,7 @@
     <!-- Styles -->
     <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../../styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/pages/abb.css" rel="stylesheet" />
 </head>
 <body>
     <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
@@ -16,30 +17,21 @@
                 Algortimos de Busca em Árvore Binária
             </h3>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Contador de Nós
-            </div>
-            <div class="panel-body">
-                <button type="button" class="btn btn-success" onclick="onConteNosClick();">Conte Nós!</button>
-            </div>
-        </div>
 
+        <!-- Imprimi Nós -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 Imprimi Nós
             </div>
             <div class="panel-body">
                 <label>Informe o Nível:</label>
-                <input id="nivelNo" type="number" name="Nível" />
-                <button type="button" class="btn btn-success" onclick="onImprimeNivelClick();">Conte Nós!</button>
+                <input id="nodeFind" type="number" name="Nível" value="0" />
+                <button type="button" class="btn btn-success" onclick="onBusqueClick();">Busque!</button>
+                <br />
+                <strong>Resultado:</strong>
+                <div id="result"></div>
             </div>
         </div>
-
-
-        <br />
-        <label><strong>Resultado:</strong></label>
-        <div id="result"></div>
 
         <hr />
         <footer>
@@ -52,10 +44,13 @@
     <script src="../../library/bootstrap/respond.min.js"></script>
     <script src="../../library/pages/navigate.js"></script>
     <!-- Implementation -->
-    <script src="../../scripts/tree/ABB/dataABB.js"></script>
+    <script src="../../scripts/tree/binary/dataTree.js"></script>
+    <script src="../../scripts/tree/binary/propertiesTree.js"></script>
+    <script src="../../scripts/tree/binary/algoritmosBinary.js"></script>
+
     <script src="../../scripts/tree/ABB/algoritmosABB.js"></script>
     <script src="../../scripts/tree/ABB/pageHelper.js"></script>
-    <script src="../../util/pageUI.js"></script>
+    <script src="../../library/util/pageUI.js"></script>
 
 </body>
 </html>
