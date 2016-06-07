@@ -1,5 +1,5 @@
 ﻿// Dependence: PropertiesTree
-var AlgorBinary = (function ($, propertiesTree) {
+var AlgorBinary = (function ($, propertiesTree, pageUI) {
     var esq = propertiesTree.Esq;
     var dir = propertiesTree.Dir;
     var info = propertiesTree.Info;
@@ -19,7 +19,7 @@ var AlgorBinary = (function ($, propertiesTree) {
     var imprimeNivel = function (T, i) {
         if (T) {// Se T != NIL
             if (i === 0)
-                $('#resultPrintNode').append("<p><strong>Valor:</strong>" + info(T) + "</p>");
+                $('#resultPrintNode').append(pageUI.PrintNodeOfTreeBinary(T));
             else {
                 imprimeNivel(esq(T), (i - 1));
                 imprimeNivel(dir(T), (i - 1));
@@ -56,4 +56,4 @@ var AlgorBinary = (function ($, propertiesTree) {
         ConteFolhas: conteFolhas,
         Altura: altura
     };
-})(jQuery, PropertiesTree);
+})(jQuery, PropertiesTree, PageUI);

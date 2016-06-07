@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -48,11 +48,22 @@
             </div>
             <div class="panel-body">
                 <label>Informe o Valor do Nó:</label>
-                <input id="nodeFind" type="number" name="Nível" value="0" />
+                <input id="nodeFind" type="number" name="find" value="0" />
                 <button type="button" class="btn btn-success" onclick="onBusqueClick();">Busque!</button>
             </div>
         </div>
 
+        <!-- Busque Nós -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Buscar o Sucessor do Nó
+            </div>
+            <div class="panel-body">
+                <label>Informe o Valor do Nó:</label>
+                <input id="nodeVerifySucessor" type="number" name="Sucessor" value="0" />
+                <button type="button" class="btn btn-success" onclick="onSucessorClick();">Buscar Sucessor!</button>
+            </div>
+        </div>
         <hr />
         <footer>
             <p>&copy; 2016 - AAED USP</p>
@@ -64,13 +75,12 @@
     <script src="../../library/bootstrap/respond.min.js"></script>
     <script src="../../library/pages/navigate.js"></script>
     <!-- Implementation -->
+    <script src="../../library/util/pageUI.js"></script>
     <script src="../../scripts/tree/ABB/dataDynamic.js"></script>
     <script src="../../scripts/tree/binary/propertiesTree.js"></script>
     <script src="../../scripts/tree/binary/algoritmosBinary.js"></script>
-
     <script src="../../scripts/tree/ABB/algoritmosABB.js"></script>
     <script src="../../scripts/tree/ABB/pageHelper.js"></script>
-    <script src="../../library/util/pageUI.js"></script>
 
 </body>
 </html>
