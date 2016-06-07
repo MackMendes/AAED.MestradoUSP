@@ -60,7 +60,6 @@ var AlgorABB = (function ($, propertiesTree, pageUI) {
         }
     };
 
-
     // Inserir nó na árvore
     // T: Nó raiz
     // newNode: Novo nó para ser inserido
@@ -84,9 +83,46 @@ var AlgorABB = (function ($, propertiesTree, pageUI) {
 
         pai(newNode, ant); // Seta para o novo nó o pai dele.
 
-        NodeBaseDynamic = T; // Atualizando a lista Global de Nó!
-        // Retornando o novo nó para imprimir
-        return newNode;
+        return T; // returna árvore 
+    };
+
+    // Detela Nó Verificando o menor nó do lado direito do pai deletado
+    // T: Nó raiz
+    // x: Valor do Nó para ser deletado 
+    var deleteNode = function (T, x) {
+        var tempFilho = T;
+        if (!T) // T = NIL
+            return T;
+        else if (x < info(T)) {// Vá para esq
+            esq(T, deleteNode(esq(T), x));
+            return T;
+        }
+        else if (x > info(T)) {  // Vá para dir
+            dir(T, deleteNode(dir(T), x));
+            return T;
+        }
+        else {  // encontrei um nó para deletar. 
+            if (esq(T) && dir(T)) {// possui 2 filho
+                var minDireito = minimo(dir(T));
+                info(T, info(minDireito));
+                dir(T, deleteNode(dir(T), info(T)));
+                return T;
+            }
+            else { // Só tem um filho
+                if (esq(T)) {
+                    tempFilho = esq(T);
+                    return tempFilho;
+                }
+                else if (dir(T)) {
+                    tempFilho = dir(T);
+                    return tempFilho;
+                }
+                else {
+                    T = null;
+                    return null;
+                }
+            }
+        }
     };
 
     return {
@@ -94,6 +130,50 @@ var AlgorABB = (function ($, propertiesTree, pageUI) {
         BuscaIterativa: busqueIterativa,
         Minimo: minimo,
         Sucessor: sucessor,
-        Inserir: inserir
+        Inserir: inserir,
+        DeletaNo: deleteNode
     };
 })(jQuery, PropertiesTree, PageUI);
+
+
+
+
+
+//// Deletar nó da árvore
+//// T: Nó raiz
+//// x: Valor do Nó para ser deletado
+//var deletaNo = function (T, x) {
+//    var nodeDelete = busque(T, x);
+//    var resultadoDelete = deleta(nodeDelete);
+//    //T = returnaNoPai(resultadoDelete);
+
+//    NodeBaseDynamic = T; // Atualizando a lista Global de Nó!
+//};
+
+//// Função auxiliar para fazer as verificações sobre a removação do nó
+//// nodeDelete: Valor do Nó para ser deletado
+//var deleta = function (nodeDelete) {  // Já supondo que nodeDelete != NIL
+//    var nodeAux = null;
+//    // caso 1º (Nó único)
+//    if (!pai(nodeDelete) && !esq(nodeDelete) && !dir(nodeDelete))  // Se pai(T) = NIL e esq(T) = NIL e dir(T) = NIL
+//        return nodeAux;
+//        // caso 2º (se possui só um nó)
+//    else if (!esq(nodeDelete) || !dir(nodeDelete)) {  // Se esq(T) = NIL OU dir(T) = NIL
+//        if (esq(nodeDelete)) // Se esq(T) != NIL
+//            nodeAux = esq(nodeDelete);
+//        else
+//            nodeAux = dir(nodeDelete);
+//        pai(nodeAux, pai(nodeDelete));
+//        return nodeAux;
+//    }
+//        // Caso 3º (quando o nó tem dois filhos)
+//    else {
+//        nodeAux = sucessor(nodeDelete);
+//        if (nodeAux) {
+//            pai(nodeAux, pai(nodeDelete));
+//            esq(nodeAux, esq(nodeDelete));
+//            dir(nodeAux, dir(nodeDelete));
+//            return nodeAux;
+//        }
+//    }
+//};

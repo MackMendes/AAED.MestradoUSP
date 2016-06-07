@@ -11,10 +11,10 @@
 <body>
     <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
     <div class="container body-content">
-        <h2>Busca de Árvore Binária</h2>
+        <h2>Árvore Binária de Busca</h2>
         <div>
             <h3>
-                Algortimos de Busca em Árvore Binária
+                Algortimos de Árvore Binária de Busca
             </h3>
             <!--  -->
 
@@ -22,12 +22,18 @@
                 <div class="panel-heading">
                     Resultados:
                     <div class="btn-group btn-group-xs navbar-right" role="group" aria-label="...">
-                        <button type="button" class="btn btn-info" title="Primeiro o nó Raiz, depois os filhos (esq, dir) e por último as folhas" 
-                                onclick="onImprimirPreOrdemClick();">Imprimi PréOrdem</button>
+                        <button type="button" class="btn btn-info" title="Primeiro o nó Raiz, depois os filhos (esq, dir) e por último as folhas"
+                                onclick="onImprimirPreOrdemClick();">
+                            Imprimi PréOrdem
+                        </button>
                         <button type="button" class="btn btn-info" title="Primeiro as folhas, depois filhos (esq, dir) e por último o nó Raiz"
-                                onclick="onImprimirPosOrdemClick();">Imprimi PósOrdem</button>
+                                onclick="onImprimirPosOrdemClick();">
+                            Imprimi PósOrdem
+                        </button>
                         <button type="button" class="btn btn-info" title="Primeiros os filhos (esq, dir), depois folhas e por último o nó Raiz"
-                                onclick="onImprimirInOrdemClick();">Imprimi InOrdem</button>
+                                onclick="onImprimirInOrdemClick();">
+                            Imprimi InOrdem
+                        </button>
                     </div>
                 </div>
                 <div id="result" class="panel-body">
@@ -42,9 +48,9 @@
                 Inserir Nó
             </div>
             <div class="panel-body">
-                <p>Aqui, você pode inserir o nó na árvore, dinâmicamente e ir verificando como vai ficando a árvore, pedindo para imprimir.</p>
-                <label>Informe o Valor do Nó:</label>
-                <input id="nodeAdd" type="number" name="Nível" value="0" />
+                <p>Aqui, você pode inserir o nó na árvore, dinamicamente e ir verificando como vai ficando a árvore, clicando em Pré-Ordem.</p>
+                <label>Informe o Valor (info) do Nó:</label>
+                <input id="nodeAdd" type="number" name="Nível" />
                 <button type="button" class="btn btn-success" onclick="onInserirClick();">Inserir!</button>
             </div>
         </div>
@@ -55,7 +61,8 @@
                 Busque Nó
             </div>
             <div class="panel-body">
-                <label>Informe o Valor do Nó:</label>
+                <p>Através do valor (info) do nó, é feito a busca na árvore binária.</p>
+                <label>Informe o Valor (info) do Nó:</label>
                 <input id="nodeFind" type="number" name="find" value="0" />
                 <button type="button" class="btn btn-success" onclick="onBusqueClick();">Busque!</button>
             </div>
@@ -67,11 +74,32 @@
                 Buscar o Sucessor do Nó
             </div>
             <div class="panel-body">
-                <label>Informe o Valor do Nó:</label>
+                <p>
+                    Através do valor (info) do nó, é feito a busca deste nó na árvore. Com esse nó (contendo o valor de
+                    pai, filho esquerdo e filho direito), o algoritmo vai buscar o sucessor deste nó.
+                </p>
+                <label>Informe o Valor (info) do Nó:</label>
                 <input id="nodeVerifySucessor" type="number" name="Sucessor" value="0" />
                 <button type="button" class="btn btn-success" onclick="onSucessorClick();">Buscar Sucessor!</button>
             </div>
         </div>
+
+        <!-- Delete do Nós -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Deletar Nó
+            </div>
+            <div class="panel-body">
+                <p>
+                    Através do valor (info) do nó, é feito a busca deste nó na árvore. Com esse nó verifico através do
+                    algoritmo de Sucessor...
+                </p>
+                <label>Informe o Valor (info) do Nó:</label>
+                <input id="nodeDelete" type="number" name="Delete" value="0" />
+                <button type="button" class="btn btn-success" onclick="onDeleteClick();">Deletar Nó!</button>
+            </div>
+        </div>
+
         <hr />
         <footer>
             <p>&copy; 2016 - AAED USP</p>

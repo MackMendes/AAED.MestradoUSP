@@ -16,6 +16,7 @@ var onBusqueClick = function () {
     if ($.trim(nivelNo) !== '') {
         var node = AlgorABB.Busque(NodeBaseDynamic, parseInt(nivelNo));
         PrintNode(node, 'Busca:');
+        $('#nodeFind').val('');
     }
 };
 
@@ -30,8 +31,10 @@ var onInserirClick = function () {
     var nivelNo = $('#nodeAdd').val();
     if ($.trim(nivelNo) !== '') {
         var newNode = new TreeDynamic(nivelNo);
-        var node = AlgorABB.Inserir(NodeBaseDynamic, newNode);
-        PrintNode(node, 'Inserido:');
+        NodeBaseDynamic = AlgorABB.Inserir(NodeBaseDynamic, newNode);
+        PrintResult('', 'Inserido:');
+        AlgorBinary.PreOrdem(NodeBaseDynamic, $('#result'));
+        $('#nodeAdd').val('');
     }
 };
 
@@ -48,6 +51,22 @@ var onSucessorClick = function () {
         var resultSucessor = PageUI.PrintNodeOfTreeBinary(sucessor) + resultNode;
 
         PrintResult(resultSucessor, 'Sucessor:');
+    }
+};
+
+var onDeleteClick = function () {
+    var nodeDelete = $('#nodeDelete').val();
+    if ($.trim(nodeDelete) !== '') {
+        var nodeFound = AlgorABB.Busque(NodeBaseDynamic, parseInt(nodeDelete));
+        var resultNode = '<br/><strong>Nó Deletado: </strong>';
+        if (nodeFound) { // Se encontrar algum nó pela busca
+            resultNode += PageUI.PrintNodeOfTreeBinary(nodeFound);
+            NodeBaseDynamic = AlgorABB.DeletaNo(NodeBaseDynamic, parseInt(nodeDelete));
+        }
+        resultNode += '<strong>Árvore depois de nó deletado:</strong>';
+
+        PrintResult(resultNode, '');
+        AlgorBinary.PreOrdem(NodeBaseDynamic, $('#result'));
     }
 };
 
@@ -69,7 +88,6 @@ var onImprimirPosOrdemClick = function () {
 // Evento para imprimir a In Ordem
 var onImprimirInOrdemClick = function () {
     PrintResult('Primeiro os filhos (esquerdo e direito), depois folhas (esquerdo e direito) e por último o nó Raiz', 'In Ordem:');
-    var result = AlgorBinary.InOrdem(NodeBaseDynamic, $('#result'));    
+    AlgorBinary.InOrdem(NodeBaseDynamic, $('#result'));
 };
-
 // ------------------------------------------------------ //
