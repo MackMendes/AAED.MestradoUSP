@@ -1,5 +1,5 @@
-// Dependence: PropertiesTree
-var AlgorABB = (function ($, propertiesTree) {
+﻿// Dependence: PropertiesTree
+var AlgorABB = (function ($, propertiesTree, pageUI) {
     var esq = propertiesTree.Esq;
     var dir = propertiesTree.Dir;
     var info = propertiesTree.Info;
@@ -96,4 +96,4 @@ var AlgorABB = (function ($, propertiesTree) {
         Sucessor: sucessor,
         Inserir: inserir
     };
-})(jQuery, PropertiesTree);
+})(jQuery, PropertiesTree, PageUI);

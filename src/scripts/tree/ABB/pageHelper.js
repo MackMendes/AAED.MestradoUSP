@@ -1,4 +1,5 @@
-﻿var PrintNode = function (node, nameEvent) {
+﻿// Functions Auxiliares para imprimir resultado
+var PrintNode = function (node, nameEvent) {
     PageUI.ClearResultado('#result');
     var result = PageUI.PrintNodeOfTreeBinary(node);
     PrintResult(result, nameEvent);
@@ -7,14 +8,7 @@
 var PrintResult = function (result, nameEvent) {
     $('#result').html((nameEvent ? '<strong>' + nameEvent + '</strong> ' : '') + result);
 }
-
-var PrintAllTree = function () {
-
-
-};
-
-
-
+// ------------------------------------------------- //
 
 // Evento para acionar o Imprimi Nível
 var onBusqueClick = function () {
@@ -56,3 +50,26 @@ var onSucessorClick = function () {
         PrintResult(resultSucessor, 'Sucessor:');
     }
 };
+
+
+
+// Algoritmos de rotina de Árvore Binária 
+// Evento para imprimir a Pré Ordem
+var onImprimirPreOrdemClick = function () {
+    PrintResult('Primeiro o nó Raiz, depois os filhos (esquerdo e direito) e por último as folhas (esquerdo e direito)', 'Pré Ordem:');
+    AlgorBinary.PreOrdem(NodeBaseDynamic, $('#result'));
+};
+
+// Evento para imprimir a Pós Ordem
+var onImprimirPosOrdemClick = function () {
+    PrintResult('Primeiro as folhas(esquerdo e direito), depois filhos (esquerdo e direito) e por último o nó Raiz', 'Pós Ordem:');
+    AlgorBinary.PosOrdem(NodeBaseDynamic, $('#result'));
+};
+
+// Evento para imprimir a In Ordem
+var onImprimirInOrdemClick = function () {
+    PrintResult('Primeiro os filhos (esquerdo e direito), depois folhas (esquerdo e direito) e por último o nó Raiz', 'In Ordem:');
+    var result = AlgorBinary.InOrdem(NodeBaseDynamic, $('#result'));    
+};
+
+// ------------------------------------------------------ //

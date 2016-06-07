@@ -21,6 +21,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Resultados:
+                    <div class="btn-group btn-group-xs navbar-right" role="group" aria-label="...">
+                        <button type="button" class="btn btn-info" title="Primeiro o nó Raiz, depois os filhos (esq, dir) e por último as folhas" 
+                                onclick="onImprimirPreOrdemClick();">Imprimi PréOrdem</button>
+                        <button type="button" class="btn btn-info" title="Primeiro as folhas, depois filhos (esq, dir) e por último o nó Raiz"
+                                onclick="onImprimirPosOrdemClick();">Imprimi PósOrdem</button>
+                        <button type="button" class="btn btn-info" title="Primeiros os filhos (esq, dir), depois folhas e por último o nó Raiz"
+                                onclick="onImprimirInOrdemClick();">Imprimi InOrdem</button>
+                    </div>
                 </div>
                 <div id="result" class="panel-body">
                 </div>
@@ -53,7 +61,7 @@
             </div>
         </div>
 
-        <!-- Busque Nós -->
+        <!-- Busque o Sucessor do Nós -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 Buscar o Sucessor do Nó
