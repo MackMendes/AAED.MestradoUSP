@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Algoritmos de AAED - Mestrado USP (PRIORITY QUEUE)</title>
+    <!-- Styles -->
+    <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
+    <div class="container body-content">
+        <h2>Fila com prioridades</h2>
+        <div>
+            <p>
+                A fila com prioridades é um TAD (Tipo Abstrato de Dados) que consiste de uma coleção S de elementos.
+				Cada elemento possui uma prioridade p associada. O valor de p determina a prioridade na remoção de cada elemento
+				da fila com relação aos outros elementos. A fila com prioridades pode ser utilizada em aplicações práticas do dia-a-dia,
+				como por exemplo, uma fila de banco com clientes preferenciais.
+            </p>
+			<p>
+				Vamos utilizar o max-heap S = 46,41,34,23,30,21,14,17,12,15,13,10 para implementar a fila com prioridades.
+			</p>
+			<button type="button" class="btn btn-success" onclick="testMaximum()">Maximum!</button>
+			<button type="button" class="btn btn-success" onclick="testExtractMax()">Extract Maximum!</button>
+			<button type="button" class="btn btn-success" onclick="testIncreaseKey()">Increase Key</button>
+			<button type="button" class="btn btn-success" onclick="testMaxHeapInsert()">Insert</button>
+			<p id ="resultQueue"></p>
+        </div>
+        <!-- Desenvolver aqui -->
+        <!-- Terminar aqui  -->
+        <hr />
+        <footer>
+            <p>&copy; 2016 - AAED USP</p>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="../../library/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../../library/bootstrap/bootstrap.js"></script>
+    <script src="../../library/bootstrap/respond.min.js"></script>
+    <script src="../../library/pages/navigate.js"></script>
+	
+	<!-- Heap -->
+	<script src="../../library/util/swap.js"></script>
+	<script src="../../library/util/maxHeapify.js"></script>
+	<script src="../../library/util/buildMaxHeap.js"></script>
+	
+	<!-- Priority Queue -->
+	<script src="../../scripts/structure/pqueue/pqueue.js"></script>
+	
+	
+</body>
+</html>
