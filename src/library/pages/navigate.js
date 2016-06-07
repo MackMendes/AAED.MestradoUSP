@@ -17,8 +17,9 @@
 		},
         {
             name: 'Estruturas', url: '#', children: [
-                { name: 'Fila', url: '/pages/structure/stack.html', children: [] },
-                { name: 'Pilha', url: '/pages/structure/queue.html', children: [] }
+                { name: 'Pilha', url: '/pages/structure/stack.html', children: [] },
+                { name: 'Fila', url: '/pages/structure/queue.html', children: [] },
+                { name: 'Fila de Prioridade', url: '/pages/structure/pqueue.html', children: [] }
             ]
         },
         { name: 'Grafo', url: '/pages/grafo.html', children: [] }
