@@ -1,4 +1,4 @@
-﻿// Dependence: PropertiesTree
+﻿// Dependence: jQuery, PropertiesTree, PageUI
 var AlgorABB = (function ($, propertiesTree, pageUI) {
     var esq = propertiesTree.Esq;
     var dir = propertiesTree.Dir;
