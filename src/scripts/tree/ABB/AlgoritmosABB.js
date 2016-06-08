@@ -101,14 +101,14 @@ var AlgorABB = (function ($, propertiesTree, pageUI) {
             dir(T, deleteNode(dir(T), x));
             return T;
         }
-        else {  // encontrei um nó para deletar. 
-            if (esq(T) && dir(T)) {// possui 2 filho
-                var minDireito = minimo(dir(T));
+        else {  // Encontrei um nó para deletar. 
+            if (esq(T) && dir(T)) {                 // Possui 2 filhos  - Caso 3
+                var minDireito = minimo(dir(T));    // Utilizando o algoritmo de Mínimo para encontrar o menor nó da sub-árvore da direitra
                 info(T, info(minDireito));
                 dir(T, deleteNode(dir(T), info(T)));
                 return T;
             }
-            else { // Só tem um filho
+            else { // Só tem um filho     - Caso 2)
                 if (esq(T)) {
                     tempFilho = esq(T);
                     return tempFilho;
@@ -117,7 +117,7 @@ var AlgorABB = (function ($, propertiesTree, pageUI) {
                     tempFilho = dir(T);
                     return tempFilho;
                 }
-                else {
+                else { // Não possui filho (Exclui ele mesmo)  - Caso 1)
                     T = null;
                     return null;
                 }

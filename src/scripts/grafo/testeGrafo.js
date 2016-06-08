@@ -21,8 +21,6 @@
 };
 
 
-
-
 var testeBuscaLarguraApostila = function () {
     debugger;
     // Vértices
