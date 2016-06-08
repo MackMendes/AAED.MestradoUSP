@@ -3,6 +3,10 @@
         $('#result').append(html);
     };
 
+    var clearResult = function () {
+        $('#result').html('');
+    };
+
     var printGrafo = function (verticeActual, valor, cor) {
         var enumCor = { WHITE: 0, GRAY: 1, BLACK: 3 }
         var print = verticeActual + '(' + valor + ')';
@@ -18,7 +22,8 @@
 
     return {
         PrintResult: printResult,
-        PrintGrafo: printGrafo
+        PrintGrafo: printGrafo,
+        ClearResult: clearResult
     };
 
 })(jQuery);

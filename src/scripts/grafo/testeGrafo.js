@@ -10,7 +10,7 @@
         3: [2, 4, 6],
         4: [1, 5],
         5: [4, 6],
-        6: [1,4]
+        6: [1, 4]
     };
 
     // Vértice de inicio
@@ -41,9 +41,12 @@ var testeBuscaLarguraApostila = function () {
     };
 
     // Vértice de inicio
-    var s = 's';
+    // var s = 's';
 
-    AlgorGafro.BFS(V, Adj, s);
+    PegaHelper.ClearResult();
+    var s = $.trim($('#vertOrigem').val());
+    if (s !== '')
+        AlgorGafro.BFS(V, Adj, s);
 
 };
 

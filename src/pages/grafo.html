@@ -31,28 +31,32 @@
                 Busca em Largura (BFS - Breadth-First-Search)
             </div>
             <div class="panel-body">
-                <p>
-                    Busca em Largura (BFS - Breadth-First-Search), utilizando o algoritmo de busca em Largura para descubrir todo o caminho,
-                    aparti de um vértice informado:
-                </p>
-                <p>
-                    <strong>Vértices:</strong> [s, r, v, w, t, u, x, y];
-                </p>
-                <p>
-                    <strong>Lista de Adjacência:</strong>
-                    <ul>
-                        <li><b>s</b>: [r, w],</li>
-                        <li><b>w</b>: [s, t, x],  </li>
-                        <li><b>r</b>: [v, s],</li>
-                        <li><b>v</b>: [r],     </li>
-                        <li><b>t</b>: [w, x, u],  </li>
-                        <li><b>x</b>: [w, t, y],  </li>
-                        <li><b>y</b>: [x, u],</li>
-                        <li><b>u</b>: [t, y],</li>
-                    </ul>
+                <div>
+                    <p>
+                        Busca em Largura (BFS - Breadth-First-Search), utilizando o algoritmo de busca em Largura para descubrir todo o caminho,
+                        aparti de um vértice informado:
+                    </p>
+                    <p>
+                        <label>Vértices:</label> [s, r, v, w, t, u, x, y];
+                    </p>
+                    <p>
+                        <label>Lista de Adjacência:</label>
+                        <ul>
+                            <li><b>s</b>: [w, r],</li>
+                            <li><b>w</b>: [s, t, x],</li>
+                            <li><b>r</b>: [v, s],</li>
+                            <li><b>v</b>: [r],</li>
+                            <li><b>t</b>: [w, x, u],</li>
+                            <li><b>x</b>: [w, t, y],</li>
+                            <li><b>y</b>: [x, u],</li>
+                            <li><b>u</b>: [t, y],</li>
+                        </ul>
 
-                </p>
-
+                    </p>
+                    <i>Pressione f12 do navegador para depurar o código</i>
+                </div>
+                <label>O vértice origem:</label>
+                <input id="vertOrigem" type="text" name="verticeOrigem" />
                 <button type="button" class="btn btn-success" onclick="testeBuscaLarguraApostila();">BFS!</button>
             </div>
         </div>
