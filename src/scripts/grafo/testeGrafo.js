@@ -46,7 +46,15 @@ var testeBuscaLarguraApostila = function () {
     PegaHelper.ClearResult();
     var s = $.trim($('#vertOrigem').val());
     if (s !== '')
-        AlgorGafro.BFS(V, Adj, s);
+        AlgorBFS.Buscar(V, Adj, s);
 
 };
+
+
+
+var testarPrintPath = function () {
+    var vOrig = $('#vOrigem').val();
+    var vDesti = $('#vDestino').val();
+    AlgorBFS.PrintPathBFS(vOrig, vDesti);
+}
 

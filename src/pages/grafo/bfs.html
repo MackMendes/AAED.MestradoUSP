@@ -55,9 +55,17 @@
                     </p>
                     <i>Pressione f12 do navegador para depurar o código</i>
                 </div>
-                <label>O vértice origem:</label>
-                <input id="vertOrigem" type="text" name="verticeOrigem" />
-                <button type="button" class="btn btn-success" onclick="testeBuscaLarguraApostila();">BFS!</button>
+                <div>
+                    <label>O vértice origem:</label>
+                    <input id="vertOrigem" type="text" name="verticeOrigem" />
+                    <button type="button" class="btn btn-success" onclick="testeBuscaLarguraApostila();">BFS!</button>
+                </div>
+                <div>
+                    <label>Mostrar caminhos mais curto entre <i>Vértice Origem</i> ao <i>Vértice Destino:</i></label>
+                    <input id="vOrigem" type="text" name="vOrigem" /> à 
+                    <input id="vDestino" type="text" name="vDestino" />
+                    <button type="button" class="btn btn-success" onclick="testarPrintPath();">Verificar Caminho!</button>
+                </div>
             </div>
         </div>
         <hr />
@@ -73,6 +81,7 @@
     <!-- Implementações -->
     <script src="../../scripts/grafo/pageHelper.js"></script>
     <script src="../../scripts/grafo/algoritmosGrafo.js"></script>
+    <script src="../../scripts/grafo/algoritmoBfs.js"></script>
     <script src="../../scripts/grafo/testeGrafo.js"></script>
 </body>
 </html>
