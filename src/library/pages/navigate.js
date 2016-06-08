@@ -22,7 +22,12 @@
                 { name: 'Fila de Prioridade', url: '/pages/structure/pqueue.html', children: [] }
             ]
         },
-        { name: 'Grafo', url: '/pages/grafo.html', children: [] }
+        {
+            name: 'Grafo', url: '#', children: [
+                { name: 'Buscar em Largura', url: '/pages/grafo/bfs.html', children: [] },
+                { name: 'Buscar em Profundidade', url: '/pages/grafo/dfs.html', children: [] }
+            ]
+        }
     ];
 
     // Comportamento para criar link do menu

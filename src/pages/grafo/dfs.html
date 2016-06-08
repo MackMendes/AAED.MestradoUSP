@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Algoritmos de AAED - Mestrado USP (GRAFO - DFS)</title>
+    <!-- Styles -->
+    <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../styles/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="menu-nav" class="navbar navbar-inverse navbar-fixed-top"></div>
+    <div class="container body-content">
+        <h2>Grafo</h2>
+        <div>
+            <h3>
+                Estudo dos Grafos - Busca em Profundidade (DFS - Depth-First-Search)
+            </h3>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Resultados:
+                </div>
+                <div id="result" class="panel-body">
+                </div>
+            </div>
+
+        </div>
+        <!--  Busca em Profundidade (DFS - Depth-First-Search) -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Busca em Profundidade (DFS - Depth-First-Search)
+            </div>
+            <div class="panel-body">
+                <div>
+                    <p>
+                        Busca em Profundidade (DFS - Depth-First-Search), utilizando o algoritmo de busca em Profundidade para descubrir todo o caminho,
+                        aparti de um vértice informado:
+                    </p>
+                    <p>
+                        <label>Vértices:</label> [s, r, v, w, t, u, x, y];
+                    </p>
+                    <p>
+                        <label>Lista de Adjacência:</label>
+                        <ul>
+                            <li><b>s</b>: [w, r],</li>
+                            <li><b>w</b>: [s, t, x],</li>
+                            <li><b>r</b>: [v, s],</li>
+                            <li><b>v</b>: [r],</li>
+                            <li><b>t</b>: [w, x, u],</li>
+                            <li><b>x</b>: [w, t, y],</li>
+                            <li><b>y</b>: [x, u],</li>
+                            <li><b>u</b>: [t, y],</li>
+                        </ul>
+
+                    </p>
+                    <i>Pressione f12 do navegador para depurar o código</i>
+                </div>
+                <label>O vértice origem:</label>
+                <input id="vertOrigem" type="text" name="verticeOrigem" />
+                <button type="button" class="btn btn-success" onclick="">DFS!</button>
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; 2016 - AAED USP</p>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="../../library/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../../library/bootstrap/bootstrap.js"></script>
+    <script src="../../library/bootstrap/respond.min.js"></script>
+    <script src="../../library/pages/navigate.js"></script>
+    <!-- Implementações -->
+    <script src="../../scripts/grafo/pageHelper.js"></script>
+
+</body>
+</html>
