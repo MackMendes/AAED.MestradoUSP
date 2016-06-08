@@ -1,4 +1,4 @@
-﻿var AlgorGafro = (function () {
+﻿var AlgorGafro = (function (pegaHelper) {
     var cor = {};
     var d = {};
     var lbl = {};
@@ -14,12 +14,16 @@
                 cor[u] = enumCor.WHITE;
                 d[u] = Infinity;  // Infinito positivo 
                 lbl[u] = null;
+                // Printar valores
+                PegaHelper.PrintGrafo(u, d[u], cor[u]);
             }
         }
 
         cor[s] = enumCor.GRAY;
         d[s] = 0;
         lbl[s] = null;
+        // Printar valores
+        PegaHelper.PrintGrafo(s, d[s], cor[s]);
         var Q = [];
         ENQUEUE(Q, s);
         while (Q.length > 0) {
@@ -31,10 +35,13 @@
                     d[v] = d[u] + 1;
                     lbl[v] = u;
                     ENQUEUE(Q, v);
+                    // Printar valores
+                    PegaHelper.PrintGrafo(v, d[v], cor[v]);
                 }
             }
 
             cor[u] = enumCor.BLACK;
+            PegaHelper.PrintGrafo(u, d[u], cor[u]);
         }
 
         dispose();
@@ -65,5 +72,4 @@
         BFS: buscaLargura
     };
 
-
-})();
+})(PegaHelper);

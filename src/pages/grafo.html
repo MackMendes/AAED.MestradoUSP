@@ -15,17 +15,45 @@
             <h3>
                 Incluir aqui comentário e detalhes de Grafo
             </h3>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Resultados:
+                </div>
+                <div id="result" class="panel-body">
+                </div>
+            </div>
+
         </div>
         <!-- Busca em Largura (BFS - Breadth-First-Search) -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                Busca em Largura (BFS - Breadth-First-Search): 
+                Busca em Largura (BFS - Breadth-First-Search)
             </div>
             <div class="panel-body">
+                <p>
+                    Busca em Largura (BFS - Breadth-First-Search), utilizando o algoritmo de busca em Largura para descubrir todo o caminho,
+                    aparti de um vértice informado:
+                </p>
+                <p>
+                    <strong>Vértices:</strong> [s, r, v, w, t, u, x, y];
+                </p>
+                <p>
+                    <strong>Lista de Adjacência:</strong>
+                    <ul>
+                        <li><b>s</b>: [r, w],</li>
+                        <li><b>w</b>: [s, t, x],  </li>
+                        <li><b>r</b>: [v, s],</li>
+                        <li><b>v</b>: [r],     </li>
+                        <li><b>t</b>: [w, x, u],  </li>
+                        <li><b>x</b>: [w, t, y],  </li>
+                        <li><b>y</b>: [x, u],</li>
+                        <li><b>u</b>: [t, y],</li>
+                    </ul>
+
+                </p>
+
                 <button type="button" class="btn btn-success" onclick="testeBuscaLarguraApostila();">BFS!</button>
-                <br />
-                <strong>Resultado:</strong>
-                <div id="resultBFS"></div>
             </div>
         </div>
         <hr />
@@ -37,8 +65,9 @@
     <script src="../library/jquery/jquery-1.11.2.min.js"></script>
     <script src="../library/bootstrap/bootstrap.js"></script>
     <script src="../library/bootstrap/respond.min.js"></script>
-    <script src="../library/pages/navigate.js"></script>    
+    <script src="../library/pages/navigate.js"></script>
     <!-- Implementações -->
+    <script src="../scripts/grafo/pageHelper.js"></script>
     <script src="../scripts/grafo/algoritmosGrafo.js"></script>
     <script src="../scripts/grafo/testeGrafo.js"></script>
 </body>

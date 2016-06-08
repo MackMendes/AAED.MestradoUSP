@@ -30,7 +30,7 @@ var testeBuscaLarguraApostila = function () {
 
     // Lista de Adjacência (um objeto com as propriedade sendo númerico, só JavaScript pra fazer isso! FODA!!!!! \m/ S2 JS!!!!!)
     var Adj = {
-        's': ['r', 'w'],
+        's': ['w', 'r'],
         'w': ['s', 't', 'x'],
         'r': ['v', 's'],
         'v': ['r'],
