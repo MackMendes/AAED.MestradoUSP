@@ -1,5 +1,6 @@
 ﻿// Dependence: PropertiesTree
 var AlgorBinary = (function ($, propertiesTree, pageUI) {
+    'use strict';
     var esq = propertiesTree.Esq;
     var dir = propertiesTree.Dir;
     var info = propertiesTree.Info;
