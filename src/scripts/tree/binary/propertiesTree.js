@@ -1,4 +1,5 @@
 ﻿var PropertiesTree = (function () {
+﻿   'use strict';
     // Pega o Filho do lado direito (GET) ou Seta o novo lado esquerdo do nó (SET)
     // T: Nó Atual
     var esq = function (T, valor) {
